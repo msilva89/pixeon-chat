@@ -33,3 +33,26 @@ irar criar um pequeno servidor de aplicação na porta 80, caso queira trocar a 
 ```}).listen(PORTA);```
 logo apos acesse http://localhost/pixeon-chat/
 caso não tenho o [NodeJs](https://nodejs.org/en/), baixa qualquer outro web container [Tomcat](https://tomcat.apache.org/download-80.cgi) ou [XAMPP](https://www.apachefriends.org/pt_br/index.html), porem você deverar fazer o deploy manualmente.
+
+3. Descrever o relatório com no mínimo os seguintes tópicos:
+
+* a. Um pequeno parágrafo sobre Single Page Application (SPA); 
+   * Feito a cima
+* b. Um paragrafo sobre Restful Services ou Resource-oriented Architecture;
+   * Feito a cima
+* c. Descreva como você hospedaria sua aplicação para ser acessada por seus
+clientes;
+   * Hospedaria em alguma cloud com docker e afins
+    
+* d. Descreva o trabalho realizado;
+  *  Foi feito um chat de conversa para empresa [Pixeon](http://pixeon.com.br/)
+* e. Escolhas importantes realizada no percurso;
+   * Não tive escolhas importantes, apenas me arrependo de ter escolhido [angular-chat](https://github.com/stephenlb/angularjs-chat),
+       ou não vi toda sua api.
+       
+* f. Facilidades e Dificuldades
+  * Facilidades o front-end foi bem tranquilo muito material na web para pesquisa
+       Dificuldade não conhecia o [Play Framework](https://www.playframework.com/), foi um pouco dificl no começo, mas como ja tenho
+       experiência com java me facilitou, porem não utilizaria este framework para a construção do chat, prefiro optar pelo 
+       [Spring Boot](https://projects.spring.io/spring-boot/) por toda sua versatilidade
+
