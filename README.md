@@ -1,6 +1,6 @@
 # pixeon-chat
 
-## SPQ
+## SPA
 
 https://hipsters.tech/single-page-applications-hipsters-16/
 
