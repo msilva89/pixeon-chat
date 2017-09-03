@@ -1,0 +1,30 @@
+<nav class="navbar navbar-default" ng-controller="loginCtrl">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <ul class="nav navbar-top-links navbar-left hidden-xs">
+                <a href="http://pixeon.com.br/" target="_blank"> 
+                    <img src="img/logoPixeon.png" class="logo-painel" alt="Logo Pixeon" title="Painel Pixeon">
+                </a>
+            </ul>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <div id="customBtn" class="customGPlusSignIn" ng-hide="desabilitarGoogle">
+                        <span class="icon"></span>
+                        <span class="buttonText">Logar com o Google</span>
+                        <div id="btIn" class="navbar-btn g-signin2" ng-click="login()" data-theme="dark"></div>
+                    </div>
+                </li>
+                <li ng-hide="desabilitar">
+                    Bem vindo ao chat: <strong> {{usuarioLog.name}} </strong> <img src="{{usuarioLog.imageUrl}}" class="img-50-50 img-circle"
+                    />
+                    <button class="btn btn-default" ng-click="logout()">Sair</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

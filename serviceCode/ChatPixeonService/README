@@ -1,0 +1,15 @@
+This is your new Play application
+=====================================
+
+This file will be packaged with your application, when using `play dist`.
+
+
+
+GET		/lastUser					controllers.ChatControllerApplication.
+GET		/groupUsers					controllers.ChatControllerApplication.
+POST	/logaut						controllers.ChatControllerApplication.
+
+GET     /                           controllers.Application.index()
+GET		/jsonRequest				controllers.ChatControllerApplication.index()
+
+}

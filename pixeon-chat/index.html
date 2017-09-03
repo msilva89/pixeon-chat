@@ -1,0 +1,74 @@
+<!doctype html>
+<html ng-app="pixeonChat">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="O melhor conteúdo da internet você encontra aqui.">
+
+
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <title>Pixeon - Google API</title>
+
+
+    <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+    <!-- css -->
+    <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleGoogleBtn.css">
+    <link rel="stylesheet" href="css/chat2.css">
+    <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+    <!-- includes -->
+    <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-chat/angular-chat.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
+    <script src="node_modules/satellizer/dist/satellizer.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/angular-cookie/angular-cookie.js"></script>
+    <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+    <!-- configuration -->
+    <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+    <script src="app/app.js"></script>
+    <script src="app/chat.js"></script>
+    <script src="app/routeConfig/routeConfig.js"></script>
+    <script src="app/value/configValue.js"></script>
+    <!-- <script src="app/interceptors/interceptorsConfig.js"></script> -->
+    <!-- <script src="app/interceptors/loadingInterceptor.js"></script> -->
+    <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+    <!-- controller -->
+    <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+    <script src="app/controllers/chatController.js"></script>
+    <script src="app/controllers/loginController.js"></script>
+    <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+    <!-- service -->
+    <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+    <script src="app/services/chatAPIService.js"></script>
+    <script src="app/services/loginAPIService.js"></script>
+
+    <!-- Google api -->
+    <script src="https://apis.google.com/js/api:client.js"></script>
+
+</head>
+
+<body>
+    <div ng-include="'view/header.html'"></div>
+ 
+    <div class="main container">
+        <!-- Onde será carregada a view -->
+        <div ng-show="loading">
+            <h5>Carregando, por favor aguarde...</h5>
+        </div>
+        <div ng-hide="loading">
+            <div ng-view></div>
+        </div>
+    </div>
+
+    <div ng-include="'view/footer.html'"></div>
+</body>
+
+</html>

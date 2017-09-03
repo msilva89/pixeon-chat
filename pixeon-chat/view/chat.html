@@ -1,0 +1,42 @@
+<div class="col-md-3">
+    <ul>
+        <li ng-repeat="user in listUsers | orderBy:'+name'">
+            <img src="{{user.imageUrl}}" class="img-50-50 img-circle" />
+            <span>{{ user.name }}  </span>
+        </li>
+    </ul>
+</div>
+
+<div class="row form-group col-md-6 ">
+    <div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <span class="glyphicon glyphicon-comment"></span> Chat
+            </div>
+            <div class="panel-body body-panel">
+                <ul class="chat">
+                    <li class="left clearfix" ng-repeat="message in messages">
+                        <span class="chat-img pull-left">
+                                <img src="{{message.user.img}}" alt="User Avatar" class="img-50-50 img-circle" />
+                            </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+                                <strong class="primary-font"> {{message.user.name}}</strong> <small class="pull-right text-muted">
+                                </div> <span class="glyphicon glyphicon-time"></span>{{message.dataFormatada}}</small>
+                                <p>
+                                    {{message.data}}
+                                </p>
+                            </div>
+                    </li>
+                </ul>
+                </div>
+                <div class="panel-footer clearfix">
+                    <textarea class="form-control" rows="3" ng-model="textbox" ng-minlength="1" ng-maxlength="1000"></textarea>
+                    <span class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-xs-12" style="margin-top: 10px">
+                            <button class="btn btn-warning btn-lg btn-block" id="btn-chat" ng-click="send()">Send</button>
+                        </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

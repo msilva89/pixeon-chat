@@ -1,0 +1,1 @@
+window.url = "http://localhost:9000"; // Globalmente acessível
