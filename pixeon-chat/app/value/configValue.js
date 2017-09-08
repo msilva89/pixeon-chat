@@ -1,3 +1,3 @@
 chat.value("configUrl", {
-	baseUrl: "https://pixeonchatws.herokuapp.com/"
+	baseUrl: "http://localhost:9000"
 });
