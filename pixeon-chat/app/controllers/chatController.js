@@ -27,7 +27,7 @@ chat.controller('chatCtrl',
                 $scope.userJson = json;
                 $scope.img = json.imageUrl;
                 // // Receive Messages
-                Messages.user({ name: json.givenName, img: $scope.userJson.imageUrl });
+                Messages.user({ id: json.id, name: json.givenName, img: $scope.userJson.imageUrl });
                 Messages.receive((message) => {
 
                     $scope.messages.push(message);
